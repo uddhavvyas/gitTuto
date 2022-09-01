@@ -1,0 +1,57 @@
+<mvc:View controllerName="zDemo.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m">
+	<App id="app">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Button text="Route to View 2" press="onClickRoute"/>
+					<Table class="sapUiResponsiveContentPadding" headerText="Student Data" id="idProductsTable" inset="false" items="{ path: '/StudentData' }">
+						<columns>
+							<Column width="12em">
+								<Text text="Name"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Roll No"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Class"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem vAlign="Middle">
+								<cells>
+									<Text text="{Name}"/>
+									<Text text="{Roll No}"/>
+									<Text text="{Class}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					<Table class="sapUiResponsiveContentPadding" headerText="Faculty Data" inset="false" items="{ path: '/FacultyData' }">
+						<columns>
+							<Column width="12em">
+								<Text text="Name"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true">
+								<Text text="Roll No"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem vAlign="Middle">
+								<cells>
+									<Text text="{FacultyName}"/>
+									<Text text="{FacultyDesignation}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					<List class="sapUiResponsiveContentPadding" id="ShortProductList" headerText="Products" items="{ path: '/StudentData'}">
+						<items>
+							<StandardListItem title="{Name}" info="{Class}" description="{Roll No}"/>
+						</items>
+					</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
