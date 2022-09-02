@@ -1,0 +1,132 @@
+.clsLable {
+font-weight: bold !important;
+}
+.clsCenter {
+	text-align: center !important;
+}
+.sapUiFormResGrid.sapUiFormBackgrTranslucent>div {
+    background-color: rgb(255 255 255 / 65%);
+}
+.clsWidth{
+width: fit-content;
+}
+.sapMITBFilter .sapMITBText {
+    line-height: 0.9375rem;
+    overflow: hidden;
+    padding: 0.375rem 0 0;
+    position: relative;
+    text-overflow: ellipsis;
+    width: 6rem;
+    color: #333333;
+    text-shadow: 0 0 0.125rem #ffffff;
+}
+
+.sapMShellBrandingBar{
+	background-color:  #fafafa !important;
+	 
+}
+.sapMIBar>.sapMBarLeft>.sapMBarChild:last-child, .sapMIBar .sapMBarPH>.sapMBarChild:last-child{
+	
+    	font-weight: bold !important
+}
+.sapMBar{
+		background-color: #fafafa !important;
+	 	color: #000000 !important;
+    	font-weight: bold !important
+}
+
+.PanelGridVertical{
+	background-color: #9db77836;
+}
+.sapMTB-Transparent-CTX.sapMTB {
+    padding-left: 0.75rem;
+    background-color: #6bb6e2;
+}
+.sapMPanelContent:not(.sapMPanelBGTransparent) {
+    
+    background-color: #6391ef29;
+}
+#__label2-bdi{
+	color:black;
+}
+#__label3-bdi{
+	color:black;
+}
+.sapMSplitContainerHideMode>.sapMSplitContainerDetail .sapUiResponsiveMargin, .sapMSplitContainerPortrait>.sapMSplitContainerDetail .sapUiResponsiveMargin, .sapUiResponsiveMargin 
+{
+    margin: 0 0 0rem 0!important;
+}
+.sapMPanelContent:not(.sapMPanelBGTransparent) {
+    background-color: #a8cdec61;
+}
+.sapMTB-Transparent-CTX>.sapMTitleTB.sapMTitleStyleAuto {
+    font-size: 1.125rem;
+	color: #fafafa !important;
+	font-weight: bold !important;
+}
+#__label4-bdi{
+	color:black;
+}
+#__label5-bdi{
+	color:black;
+}
+#__label6-bdi{
+	color:black;
+}
+#__filter0-text{
+	color:black;
+}
+#__filter1-text{
+	color:black;
+}
+#__filter2-text{
+	color:black;
+}
+#__label10-bdi{
+	color:black;
+}
+#__label11-bdi{
+	color:black;
+}
+#__label12-bdi{
+	color:black;
+}
+#__label13-bdi{
+	color:black;
+}
+#__label14-bdi{
+	color:black;
+}
+#__label15-bdi{
+	color:black;
+}
+#__label18-bdi{
+	color:black;
+}
+#__label19-bdi{
+	color:black;
+}
+#__label20-bdi{
+	color:black;
+}
+#__label21-bdi{
+	color:black;
+}
+.sapMITH {
+    
+    background-color:#6bb6e287;
+    border-bottom: 0rem solid #eff4f9;
+}
+.sapMITBContent {
+    padding: 1rem;
+    position: relative;
+    background-color: #a8cdec61;
+}
+.sapUiForm .sapUiFormTitle {
+    border-width: 1px;
+    border-color: #cccccc;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #fafafa !important;
+    font-weight: bold !important;
+    background-color: #6bb6e2;
+}

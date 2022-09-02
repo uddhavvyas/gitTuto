@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="Parent Material" items="{ path: '/PlantCodes' }" noDataText="No Data Found"
+		search="_handleValueHelpSearchPlantCode" confirm="_handleValueHelpClosePlantCode" cancel="_handleValueHelpClosePlantCode">
+		<StandardListItem title="{Plant Name}" description="{Plant Code}" iconDensityAware="false" iconInset="false" type="Active"/>
+	</SelectDialog>
+</core:FragmentDefinition>

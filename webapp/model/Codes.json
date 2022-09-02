@@ -1,0 +1,51 @@
+{	"PartCodes": [{
+		"Part Code": "2457",
+		"Part Name Display": "Power Projector 4713"
+	}, {
+		"Part Code": "9512",
+	    "Part Name Display": "Beam Breaker B-1"
+	}, {
+		"Part Code": "9909",
+		"Part Name Display": "Camcorder View"
+	}, {
+		"Part Code": "6637",
+		"Part Name Display": "Ergo Screen E-III"
+	}, {
+		"Part Code": "2203",
+		"Part Name Display": "Hurricane GX"
+	}],
+	
+	"PlantCodes": [{
+		"Plant Code": "1250",
+		"Plant Name": "PF-1000"
+	}, {
+		"Plant Code": "1235",
+	    "Plant Name": "HT-1037"
+	}, {
+		"Plant Code": "1233",
+		"Plant Name": "HT-1040"
+	}, {
+		"Plant Code": "2589",
+		"Plant Name": "HT-1082"
+	}, {
+		"Plant Code": "1269",
+		"Plant Name": "HT-1010"
+	}],
+	
+	"SupplierCodes": [{
+		"Supplier Code":"3333",
+		"Supplier Name": "Ultrasonic United"
+	}, {
+		"Supplier Code":"2222",
+	    "Supplier Name": "Technocom"
+	}, {
+		"Supplier Code":"1111",
+		"Supplier Name": "Fasttech"
+	}, {
+		"Supplier Code": "2589",
+		"Supplier Name": "Oxynum"
+	}, {
+		"Supplier Code": "1269",
+		"Supplier Name": "Red Point Stores"
+	}]
+}

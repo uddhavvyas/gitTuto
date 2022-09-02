@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="Supplier Code" items="{ path: '/SupplierCodes' }" noDataText="No Data Found"
+		search="_handleValueHelpSearchSupplierCode" confirm="_handleValueHelpCloseSupplierCode" cancel="_handleValueHelpCloseSupplierCode">
+		<StandardListItem title="{Supplier Name}" description="{Supplier Code}" iconDensityAware="false" iconInset="false" type="Active"/>
+	</SelectDialog>
+</core:FragmentDefinition>

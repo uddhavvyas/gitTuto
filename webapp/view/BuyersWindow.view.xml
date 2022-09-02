@@ -1,0 +1,357 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:core="sap.ui.core" controllerName="ZEicherGroup.controller.BuyersWindow" displayBlock="true">
+	<App>
+		<pages>
+			<Page title="Master Data Information" class="FontColor">
+				<content>
+					
+					<Panel width="auto" class="sapUiResponsiveMargin" id="idGridHorizotal">
+						<headerToolbar>
+							<OverflowToolbar>
+								<Title class="clsLable" text="Search Criteria"/>
+							</OverflowToolbar>
+						</headerToolbar>
+						<l:Grid defaultSpan="XL4 L4 M4 S12">
+							<l:HorizontalLayout>
+								<Label text="Material/Part Code" class="sapUiSmallMarginTop sapUiTinyMarginEnd"></Label>
+								<Input id="gblSearch1" type="Text" textFormatMode="Key" showSuggestion="true" valueHelpRequest="_handleValueHelpCompanyCode" 
+									valueHelpOnly="true" showValueHelp="true" suggestionItems="{/BuyerWindow}" >
+									<suggestionItems>
+										<core:Item text="{Part Name Display}" key="{Part Code}"/>
+									</suggestionItems>
+								</Input>
+							</l:HorizontalLayout>
+							<l:HorizontalLayout>
+								<Label text="Plant" class="sapUiSmallMarginTop sapUiTinyMarginEnd sapUiSmallMarginBegin"></Label>
+								<Select id="gblSearch2" class="sapUiSmallMarginEnd">
+									<items>
+										<core:Item text="1000" key="1000"/>
+										<core:Item text="1010" key="1010"/>
+										<core:Item text="1400" key="1400"/>
+										<core:Item text="1110" key="1110"/>
+									</items>
+								</Select>
+								<Button text="Search" press="onLoad" width="auto" icon="sap-icon://search" />
+							</l:HorizontalLayout>
+						</l:Grid>
+					</Panel>
+					<Panel width="auto" class="sapUiResponsiveMargin" id="idGridVertical" visible="false">
+						<headerToolbar>
+							<OverflowToolbar>
+								<Title class="clsLable" text="Search Criteria"/>
+							</OverflowToolbar>
+						</headerToolbar>
+						<l:Grid defaultSpan="XL4 L4 M4 S12">
+							<VBox class="sapUiResponsiveMargin">
+								<Label text="Material Code" class="sapUiTinyMarginBegin"></Label>
+								<Input id="gblSearchPhone" type="Text" textFormatMode="Key" showSuggestion="true" valueHelpRequest="_handleValueHelpCompanyCode"
+									valueHelpOnly="true" showValueHelp="true" suggestionItems="{/BuyerWindow}">
+									<suggestionItems>
+										<core:Item text="{Part Name Display}" key="{Part Code}"/>
+									</suggestionItems>
+								</Input>
+								<Label text="Plant" class="sapUiSmallMarginTop sapUiTinyMarginBegin"></Label>
+								<Select id="gblSearchPhone2" class="sapUiSmallMarginBottom" width="100%">
+									<items>
+										<core:Item text="1000" key="1000"/>
+										<core:Item text="1010" key="1010"/>
+										<core:Item text="1400" key="1400"/>
+										<core:Item text="1110" key="1110"/>
+									</items>
+								</Select>
+								<Button text="Search" press="onLoad" width="100%" icon="sap-icon://search" />
+							</VBox>
+						</l:Grid>
+					</Panel>
+					<Panel id="LgridVertical" visible="false">
+						<l:Grid defaultSpan="XL4 L4 M4 S12">
+							<l:HorizontalLayout>
+								<Label text="Part Code: " class="clsLable"/>
+								<Text id="txtpart"/>
+							</l:HorizontalLayout>
+							<l:HorizontalLayout>
+								<Label text="Part Description: " class="clsLable"/>
+								<Text id="txtplant"/>
+							</l:HorizontalLayout>
+							<l:HorizontalLayout>
+								<Label text="LLC Class: " class="clsLable"/>
+								<Text id="txtLLC"/>
+							</l:HorizontalLayout>
+						</l:Grid>
+					</Panel>
+					<Panel id="LgridHorizonatal">
+						<l:Grid defaultSpan="XL4 L4 M4 S12">
+							<l:HorizontalLayout>
+								<Label text="Part Code:" class="clsLable sapUiSmallMarginBegin"/>
+								<Text id="txtpartDesktop" class="sapUiTinyMarginBegin"/>
+							</l:HorizontalLayout>
+							<l:HorizontalLayout>
+								<Label text="Part Description:" class="clsLable sapUiSmallMarginBegin"/>
+								<Text id="txtplantDesktop" class="sapUiTinyMarginBegin"/>
+							</l:HorizontalLayout>
+							<l:HorizontalLayout>
+								<Label text="LLC Class:" class="clsLable sapUiSmallMarginBegin"/>
+								<Text id="txtLLCDesktop" class="sapUiTinyMarginBegin"/>
+							</l:HorizontalLayout>
+						</l:Grid>
+					</Panel>
+					<IconTabBar id="idIconTabBarNoIcons" class="sapUiResponsiveContentPadding" expanded="true">
+						<items>
+							<IconTabFilter text="Part Master Data" key="Part Master Data" icon="sap-icon://add-document">
+								<Table id="idBuyerWindowTbl" items="{path:'/BuyerWindow'}">
+									<headerToolbar>
+										<Toolbar>
+											<content>
+												<Title text="Part Master Data" level="H4" class="clsLable"/>
+											</content>
+										</Toolbar>
+									</headerToolbar>
+									<columns >
+										<Column width="auto">
+											<Text text="Vendor Code" class="clsLable"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+											<Text text="Vendor Name" class="clsLable"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+											<Text text="MRP" class="clsLable"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+											<Text text="PO Type" class="clsLable"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+											<Text text="PO" class="clsLable"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+											<Text text="Quality Info Record" class="clsLable"/>
+										</Column>
+										<Column width="auto"  demandPopin="true" popinDisplay="Inline">
+											<Text text="Schedule Qty" class="clsLable"/>
+										</Column>
+										<Column demandPopin="true" minScreenWidth="Tablet">
+											<Text text="Total Schedule" class="clsLable"/>
+										</Column>
+										
+									</columns>
+									<items>
+										<ColumnListItem vAlign="Middle">
+											<cells>
+												<Text text="{Vendor Code}" />
+												<Text text="{Vendor Name}" />
+												<Text text="{MRP}" />
+												<Text text="{PO Type}" />
+												<Text text="{PO}" />
+												<Text text="{Quantity Info Record}" class="clsCenter"/>
+												<Link text="{Schedule Quantity}" press="onPress" class="clsCenter" />
+												<Text text="{Total Schedule}" class="clsCenter"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</IconTabFilter>
+							<!--End of first Icon Tab Bar -->
+							<IconTabFilter text="Bill of Material" key="Bill of Material" icon="sap-icon://sales-order" >
+								<Panel id="HboxDesktop" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<OverflowToolbar>
+											<Title class="clsLable" text="Search Criteria"/>
+										</OverflowToolbar>
+									</headerToolbar>
+									<HBox class="sapUiResponsiveMargin">
+										<Label text="Usage" class="sapUiSmallMarginTop sapUiTinyMarginEnd"/>
+										<Select class="sapUiSmallMarginEnd">
+											<items>
+											<core:Item text="1" key="1"/>
+											<core:Item text="2" key="2"/>
+											<core:Item text="3" key="3"/>
+											<core:Item text="4" key="4"/>
+											</items>	
+										</Select>
+										<Label text="Parent Material" class="sapUiSmallMarginTop sapUiTinyMarginEnd sapUiSmallMarginBegin"/>
+										<Input type="Text" textFormatMode="Key" showSuggestion="true" valueHelpRequest="_handleValueHelpPlantCode" 
+									valueHelpOnly="true" showValueHelp="true" suggestionItems="{/BuyerWindow}">
+									<suggestionItems>
+										<core:Item text="Parent Material" key="{Plant Code}"/>
+									</suggestionItems>
+								</Input>
+										<Button text="Search" class="sapUiTinyMarginBegin" icon="sap-icon://search"/>
+									</HBox>
+								</Panel>
+								<Panel id="VboxMobile" visible="false" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<OverflowToolbar>
+											<Title class="clsLable" text="Search Criteria"/>
+										</OverflowToolbar>
+									</headerToolbar>
+									<l:Grid defaultSpan="XL4 L4 M4 S12">
+										<VBox class="sapUiResponsiveMargin">
+											<Label text="Usage" class="sapUiSmallMarginTop sapUiTinyMarginBegin"/>
+											<Select  width="100%">
+												<items>
+													<core:Item text="1" key="1"/>
+													<core:Item text="2" key="2"/>
+													<core:Item text="3" key="3"/>
+													<core:Item text="4" key="4"/>
+												</items>
+											</Select>
+											<Label text="Parent Material" class="sapUiSmallMarginTop sapUiTinyMarginBegin"/>
+												<Input type="Text" textFormatMode="Key" showSuggestion="true" valueHelpRequest="_handleValueHelpPlantCode" 
+									valueHelpOnly="true" showValueHelp="true" suggestionItems="{/BuyerWindow}" class="sapUiSmallMarginBottom">
+									<suggestionItems>
+										<core:Item text="Parent Material" key="{Plant Code}"/>
+									</suggestionItems>
+								</Input>
+											<Button text="Search" width="100%" icon="sap-icon://search" />
+										</VBox>
+									</l:Grid>
+								</Panel>
+								<Panel id="LgridMobileBill" visible="false" width="auto" class="sapUiResponsiveMargin">
+									<l:Grid defaultSpan="XL4 L4 M4 S12">
+										<l:HorizontalLayout>
+											<Label text="Parent Material:" class="clsLable"/>
+											<Text id="PmText" class="clsLable sapUiTinyMarginBegin"/>
+										</l:HorizontalLayout>
+										<l:HorizontalLayout>
+											<Label text="Description:" class="clsLable sapUiTinyMarginEnd"/>
+											<Text id="PmdescTxt" class="clsLable"/>
+										</l:HorizontalLayout>
+									</l:Grid>
+								</Panel>
+								<Panel id="LgridDesktopBill" width="auto" class="sapUiResponsiveMargin">
+									<l:Grid defaultSpan="XL4 L4 M4 S12">
+										<l:HorizontalLayout>
+											<Label text="Parent Material:" class="clsLable sapUiSmallMarginBegin"/>
+											<Text id="PmTextDesk" class="clsLable sapUiTinyMarginBegin"/>
+										</l:HorizontalLayout>
+										<l:HorizontalLayout>
+											<Label text="Description:" class="clsLable sapUiTinyMarginEnd"/>
+											<Text id="PmdescDeskTxt" class="clsLable"/>
+										</l:HorizontalLayout>
+									</l:Grid>
+								</Panel>
+								<Table id="idPartLevelTbl" items="{path:'/BuyerWindow'}">
+									<headerToolbar>
+										<Toolbar>
+											<content>
+												<Title text="Bill of Material" level="H4" class="clsLable"/>
+											</content>
+										</Toolbar>
+									</headerToolbar>
+									<columns>
+										<Column width="auto">
+											<Text text="Child Part" class="clsLable"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+											<Text text="Child Description" class="clsLable"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+											<Text text="Qty" class="clsLable"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline">
+											<Text text="UOM" class="clsLable"/>
+										</Column>
+										<Column width="auto">
+											<Text text="Alt Indicator" class="clsLable"/>
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem vAlign="Middle">
+											<cells>
+												<Text text="{Unristricted Stock}"/>
+												<Text text="{Under Inspection}"/>
+												<Text text="{ASN_WSN_No}"/>
+												<Text text="{Vendor Stock}"/>
+												<Text text="{WIP}"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</IconTabFilter>
+							<!-- End of second Icon Tab Bar-->
+							<IconTabFilter text="Supplier Details" key="Supplier Details" icon="sap-icon://supplier" >
+								<Panel id="HboxDesktopSupplier" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<OverflowToolbar>
+											<Title class="clsLable" text="Search Criteria"/>
+										</OverflowToolbar>
+									</headerToolbar>
+									<HBox class="sapUiResponsiveMargin">
+										<Label text="Supplier Code" class="sapUiSmallMarginTop sapUiTinyMarginEnd"/>
+											<Input type="Text" textFormatMode="Key" showSuggestion="true" valueHelpRequest="_handleValueHelpSupplierCode" 
+									valueHelpOnly="true" showValueHelp="true" suggestionItems="{/BuyerWindow}" class="sapUiTinyMarginEnd" >
+									<suggestionItems>
+										<core:Item text="Supplier Code" key="{Supplier Code}"/>
+									</suggestionItems>
+								</Input>
+										<Button text="Search" class="sapUiTinyMarginBegin" icon="sap-icon://search" />
+									</HBox>
+								</Panel>
+								<Panel id="VboxMobileSupplier" visible="false" width="auto" class="sapUiResponsiveMargin">
+									<headerToolbar>
+										<OverflowToolbar>
+											<Title class="clsLable" text="Search Criteria"/>
+										</OverflowToolbar>
+									</headerToolbar>
+									<l:Grid defaultSpan="XL4 L4 M4 S12">
+										<VBox class="sapUiResponsiveMargin">
+											<Label text="Supplier Code" class="sapUiSmallMarginTop sapUiTinyMarginBegin"/>
+											<Input type="Text" textFormatMode="Key" showSuggestion="true" valueHelpRequest="_handleValueHelpSupplierCode" 
+									valueHelpOnly="true" showValueHelp="true" suggestionItems="{/BuyerWindow}" class="sapUiSmallMarginBottom">
+									<suggestionItems>
+										<core:Item text="Supplier Code" key="{Supplier Code}"/>
+									</suggestionItems>
+								</Input>
+											<Button text="Search" width="100%" icon="sap-icon://search" />
+										</VBox>
+									</l:Grid>
+								</Panel>
+								<Panel id="LgridMobileSupplier" visible="false" width="auto" class="sapUiResponsiveMargin">
+									<l:Grid defaultSpan="XL4 L4 M4 S12">
+										<l:HorizontalLayout>
+											<Label text="Supplier Code:" class="clsLable"/>
+											<Text id="ScTextMobile" class="clsLable sapUiTinyMarginBegin"/>
+										</l:HorizontalLayout>
+										<l:HorizontalLayout>
+											<Label text="Description:" class="clsLable sapUiTinyMarginEnd"/>
+											<Text id="DescTxtMobile" class="clsLable"/>
+										</l:HorizontalLayout>
+									</l:Grid>
+								</Panel>
+								<Panel id="LgridDesktopSupplier" width="auto" class="sapUiResponsiveMargin">
+									<l:Grid defaultSpan="XL4 L4 M4 S12">
+										<l:HorizontalLayout>
+											<Label text="Supplier Code:" class="clsLable"/>
+											<Text id="ScTextDesktop" class="clsLable sapUiTinyMarginBegin"/>
+										</l:HorizontalLayout>
+										<l:HorizontalLayout>
+											<Label text="Description:" class="clsLable sapUiTinyMarginEnd"/>
+											<Text id="DescTxtDesktop" class="clsLable"/>
+										</l:HorizontalLayout>
+									</l:Grid>
+								</Panel>
+								<f:SimpleForm id="SimpleFormDisplay354" editable="false" layout="ResponsiveGridLayout" title="Supplier Details" labelSpanXL="3"
+									labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0"
+									columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+									<f:content>
+										<Label text="Supplier Name" class="clsLable"/>
+										<Text id="SuppliernameText"/>
+										<Label text="Address" class="clsLable"/>
+										<Text id="addrText"/>
+										<Label text="Email" class="clsLable"/>
+										<Text id="emailText"/>
+										<Label text="Phone no" class="clsLable"/>
+										<Text id="phoneText"/>
+										<Label text="Incoterms" class="clsLable"/>
+										<Text id="incoText"/>
+										<Label text="Payment Terms" class="clsLable"/>
+										<Text id="paymentText"/>
+									</f:content>
+								</f:SimpleForm>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

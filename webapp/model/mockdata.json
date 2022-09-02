@@ -1,0 +1,87 @@
+{"BuyerWindow" :[
+  
+  {
+	
+
+
+	
+	"Weeks":"W1",
+	"ASN_WSN_Dates":"31/10/2010",
+	"ASN_WSN_No":"3120",
+	"Inv_Date_Inv_No":"29/02/2011",
+	"Quantity Dispatch":"100",
+	"Qunatity Recieved":"33",
+	"Dates":"30/03/2013",
+	"Unristricted Stock":"12",
+	"Under Inspection":"20",
+	"WIP":"A345",
+	"Vendor Stock":"56",
+
+	"Vendor Name": "Titanium",
+	"Vendor Code": 1467,
+	"MRP": 856.49,
+	"PO Type": "Available",
+	"PO": "PO1",
+	"Quantity Info Record": 3,
+	"Schedule Quantity": "111",
+	"W1":"37",
+	"Total Schedule":"300"
+	
+  },
+  {
+
+	
+
+	
+	"Weeks":"W2",
+	"ASN_WSN_Dates":"30/12/2010",
+	"ASN_WSN_No":"0130",
+	"Inv_Date_Inv_No":"29/03/2016",
+	"Quantity Dispatch":"150",
+	"Qunatity Recieved":"22",
+	"Dates":"22/02/2012",
+	
+	"Vendor Name": "Titanium",
+	"Vendor Code": 1468,
+	"MRP": 856.49,
+	"PO Type": "Available",
+	"PO": "PO2",
+	"Unristricted Stock":"07",
+	"Under Inspection":"50",
+	"WIP":"AZ345",
+	"Vendor Stock":"36",
+	"Quantity Info Record": 3,
+	"Schedule Quantity": "111",
+	"W1":"37",
+	"Total Schedule":"600"
+
+  },
+  {
+
+	
+	
+	
+	"Weeks":"W3",
+	"ASN_WSN_Dates":"15/08/2021",
+	"ASN_WSN_No":"1215",
+	"Inv_Date_Inv_No":"26/01/2020",
+	"Quantity Dispatch":"200",
+	"Qunatity Recieved":"5",
+	"Dates":"12/03/2000",
+	
+	"Vendor Name": "Titanium",
+	"Vendor Code": 1567,
+	"MRP": 856.49,
+	"Unristricted Stock":"5",
+	"Under Inspection":"10",
+	"WIP":"UV456",
+	"Vendor Stock":"90",
+	"PO Type": "Available",
+	"PO": "PO3",
+	"Quantity Info Record": 3,
+	"Schedule Quantity": "111",
+	"W1":"37",
+	"Total Schedule":"300"
+  }
+]
+}

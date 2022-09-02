@@ -1,0 +1,35 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<ResponsivePopover title="Schedule Quantity" class="sapUiPopupWithPadding">
+		<endButton>
+			<Button text="Close" press="handleCloseButton"/>
+		</endButton>
+		<content>
+			
+				<Table width="auto" items="{path:'/BuyerWindow'}">
+					<columns>
+						<Column width="auto">
+							<Text text="Weeks" class="clsLable"/>
+						</Column>
+						<Column width="auto">
+							<Text text="Schedule Qty"  class="clsLable"/>
+						</Column>
+						<Column width="auto">
+							<Text text="Receipt Qty" class="clsLable"/>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem vAlign="Middle">
+											<cells>
+												<Text text="{Weeks}"/>
+												<Text text="{W1}"/>
+												<Text text="{Qunatity Recieved}"/>
+												
+											</cells>
+										</ColumnListItem>
+					</items>
+				</Table>	
+			
+			
+		</content>
+	</ResponsivePopover>
+</core:FragmentDefinition>

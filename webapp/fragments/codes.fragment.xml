@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog title="Material Code/Part Code" items="{ path: '/PartCodes' }" noDataText="No Data Found"
+		search="_handleValueHelpSearchPartCode" confirm="_handleValueHelpClosePartCode" cancel="_handleValueHelpClosePartCode">
+		<StandardListItem title="{Part Name Display}" description="{Part Code}" iconDensityAware="false" iconInset="false" type="Active"/>
+	</SelectDialog>
+</core:FragmentDefinition>
