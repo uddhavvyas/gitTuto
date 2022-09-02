@@ -7,12 +7,26 @@
     {
       "templateId": "ui5template.basicSAPUI5ApplicationProjectCommon",
       "templateVersion": "1.32.0",
+<<<<<<< HEAD
       "dateTimeStamp": "Wed, 16 Jun 2021 05:50:14 GMT"
     },
     {
       "templateId": "ui5template.basicSAPUI5ApplicationProject",
       "templateVersion": "1.40.12",
       "dateTimeStamp": "Wed, 16 Jun 2021 05:50:14 GMT"
+=======
+      "dateTimeStamp": "Thu, 19 May 2022 05:57:49 GMT"
+    },
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationProject",
+      "templateVersion": "1.40.12",
+      "dateTimeStamp": "Thu, 19 May 2022 05:57:49 GMT"
+    },
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationComponent",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Thu, 19 May 2022 05:58:10 GMT"
+>>>>>>> branch 'eicher' of https://github.com/uddhavvyas/gitTuto.git
     }
   ],
   "translation": {
