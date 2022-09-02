@@ -7,6 +7,7 @@ sap.ui.define([
 
 	return Controller.extend("ZEicherGroup.controller.BuyersWindow", {
 		onInit: function() {
+			
 				this._oMultiInput = this.getView().byId("gblSearch1");
 			if (innerWidth > 1024) {
 				var idGridHorizotal = this.getView().byId("idGridHorizotal").setVisible(true);
